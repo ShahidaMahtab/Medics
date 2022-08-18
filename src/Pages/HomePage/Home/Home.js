@@ -1,10 +1,11 @@
 import React from "react";
 import Hero from "../Hero/Hero";
 
-const Home = () => {
+const Home = (props) => {
+  const { open } = props;
   return (
     <div>
-      <Hero />
+      <Hero open={open} />
     </div>
   );
 };

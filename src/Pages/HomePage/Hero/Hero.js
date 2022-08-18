@@ -1,14 +1,21 @@
 import React from "react";
+
 import hero from "../../../Images/slider-bg-1.jpg";
 import PrimaryButton from "../../SharedComponents/PrimaryButton/PrimaryButton";
-const Hero = () => {
+const Hero = (props) => {
+  const { open } = props;
+  console.log("from hero ", open);
   return (
-    <section>
-      <div className="relative ">
+    <section className="container ">
+      <div className="hidden md:block  md:h-full md:w-[1500px] md:relative">
         <img src={hero} alt="" />
       </div>
-      <div className="absolute top-36 left-32 space-y-4">
-        <div class="border-t-[5px] mr-[450px]  border-pink-700 ..."></div>
+      <div
+        className={`md:absolute md:top-40 md:left-44 ${
+          open ? "mt-80" : "mt-0"
+        }`}
+      >
+        <div className="border-t-[5px] mr-[450px]  border-pink-700 ..."></div>
         <h4 className="text-base font-medium text-gray-700 ">
           TOTAL HEALTH CARE SOLUTION
         </h4>
