@@ -15,25 +15,27 @@ const Hero = (props) => {
           open ? "mt-80" : "mt-0"
         }`}
       >
-        <div className="border-t-[5px] mr-[450px]  border-pink-700 ..."></div>
-        <h4 className="text-base font-medium text-gray-700 ">
+        <div className="border-t-[5px] mr-[450px]  border-pink-700 "></div>
+        <h4 className="text-base font-medium text-gray-700 ml-10 md:ml-0">
           TOTAL HEALTH CARE SOLUTION
         </h4>
-        <h2 className="text-6xl leading-tight font-bold text-[#0E1C36]">
+        <h2 className="text-6xl leading-tight font-bold text-[#0E1C36] ml-10 md:ml-0">
           Your Most Trusted <br />
           Health Partner
         </h2>
-        <p className="text-base text-gray-500 leading-9">
+        <p className="text-base text-gray-500 leading-9 ml-10 md:ml-0">
           A repudiandae ipsam labore ipsa voluptatu quidem quae laudantium
           quisquam
           <br />
           aperiam maiores sunt fugit, deserunt rem suscipit placeat.
         </p>
-        <PrimaryButton
-          text={"MAKE APPOINTMENT"}
-          bgColor={"bg-pink-700"}
-          hover={"hover:bg-[#0E1C36]"}
-        />
+        <div className="ml-10 md:ml-0">
+          <PrimaryButton
+            text={"MAKE APPOINTMENT"}
+            bgColor={"bg-pink-700"}
+            hover={"hover:bg-[#0E1C36]"}
+          />
+        </div>
       </div>
     </section>
   );
