@@ -4,7 +4,7 @@ import hero from "../../../Images/slider-bg-1.jpg";
 import PrimaryButton from "../../SharedComponents/PrimaryButton/PrimaryButton";
 const Hero = (props) => {
   const { open } = props;
-  console.log("from hero ", open);
+
   return (
     <section className="container ">
       <div className="hidden md:block  md:h-full md:w-[1500px] md:relative">

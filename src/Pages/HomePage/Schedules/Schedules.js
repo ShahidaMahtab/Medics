@@ -7,7 +7,7 @@ import Schedule from "../Schedule/Schedule";
 const Schedules = () => {
   const schedules = [
     {
-      id: 111,
+      id: 311,
       icon: <FaNotesMedical />,
       time: "24 hour Service",
       title: "Online Appointment",
@@ -21,18 +21,18 @@ const Schedules = () => {
       ),
     },
     {
-      id: 112,
+      id: 312,
       icon: <ImClock />,
       time: "Timing schedule",
       title: "Working Hours",
       dates: [
         "Sun - Wed : 8:00 - 17:00",
         "Thu - Fri  : 8:00 - 17:00",
-        "Sun - Wed : 8:00 - 17:00",
+        "Sat - sun :10:00 - 17:00",
       ],
     },
     {
-      id: 113,
+      id: 313,
       icon: <RiCustomerService2Fill />,
       time: "Emegency Cases",
       title: "1-800-700-6200",
@@ -44,7 +44,7 @@ const Schedules = () => {
       <div className="mx-auto  md:pl-14 ">
         <div className="flex justify-center  gap-1 flex-wrap  mb-8 ">
           {schedules.map((schedule) => (
-            <Schedule key={schedule.time} schedule={schedule} />
+            <Schedule key={schedule.id} schedule={schedule} />
           ))}
         </div>
       </div>

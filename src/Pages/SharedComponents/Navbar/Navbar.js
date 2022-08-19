@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { AiOutlineMenu, AiOutlineCloseSquare } from "react-icons/ai";
@@ -17,7 +17,7 @@ const navigation = [
 const Navbar = (props) => {
   // bg-[#0E1C36]
   const { open, setOpen } = props;
-  console.log("from nav ", open);
+
   return (
     <section className="shadow ">
       {/* logo and title */}

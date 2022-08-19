@@ -12,7 +12,11 @@ const Schedule = (props) => {
         <div className=" text-base mb-4 w-80">
           {desc
             ? desc
-            : dates.map((date) => <p className="text-gray-700 ">{date} </p>)}
+            : dates.map((date) => (
+                <p key={date} className="text-gray-700 ">
+                  {date}{" "}
+                </p>
+              ))}
         </div>
         {btn}
       </div>
