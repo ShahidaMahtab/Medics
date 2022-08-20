@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../Hero/Hero";
+import PatientCareFeature from "../PatientCareFeature/PatientCareFeature";
 import PersonalCare from "../PersonalCare/PersonalCare";
 import Schedules from "../Schedules/Schedules";
 import Stats from "../Stats/Stats";
@@ -12,6 +13,7 @@ const Home = (props) => {
       <Schedules />
       <PersonalCare />
       <Stats />
+      <PatientCareFeature />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import hero from "../../../Images/slider-bg-1.jpg";
 import PrimaryButton from "../../SharedComponents/PrimaryButton/PrimaryButton";
@@ -30,11 +31,13 @@ const Hero = (props) => {
           aperiam maiores sunt fugit, deserunt rem suscipit placeat.
         </p>
         <div className="ml-10 md:ml-0">
-          <PrimaryButton
-            text={"MAKE APPOINTMENT"}
-            bgColor={"bg-pink-700"}
-            hover={"hover:bg-[#0E1C36]"}
-          />
+          <Link to={"/makeappoinment"}>
+            <PrimaryButton
+              text={"MAKE APPOINMENT"}
+              bgColor={"bg-pink-700"}
+              hover={"hover:bg-[#0E1C36]"}
+            />
+          </Link>
         </div>
       </div>
     </section>

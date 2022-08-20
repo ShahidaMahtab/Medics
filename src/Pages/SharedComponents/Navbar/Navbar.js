@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { AiOutlineMenu, AiOutlineCloseSquare } from "react-icons/ai";
 import { FaMedrt } from "react-icons/fa";
+import CustomLink from "../../HomePage/CustomLink/CustomLink";
 
 const navigation = [
   { id: 1, to: "/home", name: "Home" },
@@ -47,12 +47,12 @@ const Navbar = (props) => {
         >
           {navigation.map((nav) => (
             <li key={nav.id} className="text-xl ml-14 md:ml-4 mb-4  md:mb-0  ">
-              <Link
+              <CustomLink
                 to={nav.to}
                 className="text-black hover:text-pink-700 duration-500"
               >
                 {nav.name}
-              </Link>
+              </CustomLink>
             </li>
           ))}
         </ul>
