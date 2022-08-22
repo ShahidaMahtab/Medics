@@ -32,7 +32,7 @@ const PatientCareFeature = () => {
     },
     {
       id: 145,
-      title: "Neurology Sargery",
+      title: "Neurology Surgery",
       desc: "Saepe nulla praesentium eaque omnis perferendis a doloremque.",
       icon: <FaBrain />,
     },

@@ -5,7 +5,7 @@ const PatientFeatureItems = (props) => {
   return (
     <div className="mx-auto ">
       <div className="flex gap-2 items-center">
-        <div className="text-pink-700 text-6xl">{icon}</div>
+        <div className="text-pink-800 text-6xl">{icon}</div>
 
         <h3 className="text-2xl font-semibold ">{title}</h3>
       </div>

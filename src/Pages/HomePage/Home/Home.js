@@ -1,4 +1,5 @@
 import React from "react";
+import BookAppointment from "../BookAppointment/BookAppointment";
 import Hero from "../Hero/Hero";
 import PatientCareFeature from "../PatientCareFeature/PatientCareFeature";
 import PersonalCare from "../PersonalCare/PersonalCare";
@@ -14,6 +15,7 @@ const Home = (props) => {
       <PersonalCare />
       <Stats />
       <PatientCareFeature />
+      <BookAppointment />
     </div>
   );
 };
