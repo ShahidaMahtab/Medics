@@ -1,21 +1,24 @@
+import { createContext } from "react";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/HomePage/Home/Home";
 import MakeAppoinment from "./Pages/MakeAppoinment/MakeAppoinment";
 import NotFound from "./Pages/NotFound/NotFound";
 import Navbar from "./Pages/SharedComponents/Navbar/Navbar";
+export const ToggleContext = createContext(false);
 function App() {
   const [open, setOpen] = useState(false);
+
   return (
-    <div className="">
+    <ToggleContext.Provider value={[open, setOpen]}>
       <Navbar open={open} setOpen={setOpen}></Navbar>
       <Routes>
-        <Route path="/" element={<Home open={open} />} />
-        <Route path="/home" element={<Home open={open} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/makeappoinment" element={<MakeAppoinment />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+    </ToggleContext.Provider>
   );
 }
 

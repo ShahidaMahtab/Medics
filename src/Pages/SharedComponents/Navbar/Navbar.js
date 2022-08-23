@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { AiOutlineMenu, AiOutlineCloseSquare } from "react-icons/ai";
 import { FaMedrt } from "react-icons/fa";
+import { ToggleContext } from "../../../App";
 import CustomLink from "../../HomePage/CustomLink/CustomLink";
 
 const navigation = [
@@ -14,9 +15,9 @@ const navigation = [
   { id: 7, to: "/contact", name: "contact" },
 ];
 
-const Navbar = (props) => {
+const Navbar = () => {
   // bg-[#0E1C36]
-  const { open, setOpen } = props;
+  const [open, setOpen] = useContext(ToggleContext);
 
   return (
     <section className="shadow ">
@@ -42,7 +43,7 @@ const Navbar = (props) => {
           className={`md:flex justify-center mt-10 md:mt-0 absolute md:relative ease-out   md:transition-none w-full ${
             open
               ? "top-14 md:top-0 duration-500 "
-              : "right-[-600px]  md:right-0 duration-75"
+              : "right-[700px]  md:right-0 duration-75"
           }`}
         >
           {navigation.map((nav) => (

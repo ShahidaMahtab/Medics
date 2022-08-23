@@ -9,14 +9,14 @@ const DropDownComponents = (props) => {
   };
   const { title, options } = props;
   return (
-    <div>
+    <div className="mb-8">
       <div className="flex items-center justify-center bg-gray-200">
         <div className="relative inline-block text-left">
-          <div>
+          <div className="w-[229px] h-[41px]">
             <button
               onClick={handleClick}
               type="button"
-              className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-gray-100"
+              className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white p-3 text-lg font-medium text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 focus:ring-offset-gray-100 "
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"

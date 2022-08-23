@@ -6,11 +6,10 @@ import PersonalCare from "../PersonalCare/PersonalCare";
 import Schedules from "../Schedules/Schedules";
 import Stats from "../Stats/Stats";
 
-const Home = (props) => {
-  const { open } = props;
+const Home = () => {
   return (
     <div className="mx-auto">
-      <Hero open={open} />
+      <Hero />
       <Schedules />
       <PersonalCare />
       <Stats />

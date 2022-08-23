@@ -1,10 +1,12 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ToggleContext } from "../../../App";
 
 import hero from "../../../Images/slider-bg-1.jpg";
 import PrimaryButton from "../../SharedComponents/PrimaryButton/PrimaryButton";
-const Hero = (props) => {
-  const { open } = props;
+const Hero = () => {
+  const [open, setOpen] = useContext(ToggleContext);
 
   return (
     <section className="container ">
