@@ -1,11 +1,10 @@
 import React from "react";
-import { BsChevronRight } from "react-icons/bs";
-const PrimaryButton = (props) => {
-  const { text, bgColor, hover } = props;
+
+const PrimaryButton = ({ text, bgColor, hover }) => {
   return (
     <div>
       <button
-        className={`${bgColor} ${hover} text-white px-7 py-4 text-sm font-semibold rounded-full`}
+        className={`${bgColor} ${hover} text-white py-3 px-8 text-sm font-semibold rounded-full `}
       >
         {text}{" "}
       </button>
