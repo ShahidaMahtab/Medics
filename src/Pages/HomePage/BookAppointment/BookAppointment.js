@@ -5,11 +5,11 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 const BookAppointment = () => {
   return (
     <div className="mx-auto mt-28 mb-40">
-      <div className="flex justify-center  gap-24 flex-wrap">
+      <div className="flex justify-center gap-x-8   flex-wrap items-center">
         <div className=" relative">
           <img src={img} alt="" />
           <div className="">
-            <div className="py-12 pl-12 bg-[#0E1C36] flex justify-center items-center gap-5 md:absolute md:left-3 md:bottom-5">
+            <div className="py-12 pl-12 bg-[#0E1C36] flex justify-center items-center gap-5 md:absolute md:left-3 md:bottom-5 ">
               <p className=" border-4 border-gray-600 rounded-full  p-2">
                 <BsFillTelephoneFill className=" text-2xl text-gray-600 " />
               </p>
