@@ -44,7 +44,7 @@ const AppointmentForm = () => {
           ))}
         </div>
       </div>
-      <div className="mb-5 flex justify-center">
+      <div className="mb-5 mt-6 flex justify-center">
         <label className="block ">
           <textarea
             type="message"

@@ -9,8 +9,8 @@ const Hero = () => {
   const [open, setOpen] = useContext(ToggleContext);
 
   return (
-    <section className="container ">
-      <div className="hidden md:block  md:h-full md:w-[1500px] md:relative">
+    <section className="">
+      <div className="hidden md:block  md:relative">
         <img src={hero} alt="" />
       </div>
       <div
