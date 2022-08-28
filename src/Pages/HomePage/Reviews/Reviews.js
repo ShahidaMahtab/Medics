@@ -36,6 +36,13 @@ const reviews = [
     img: review4,
     desc: "They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.",
   },
+  {
+    id: 27,
+    title: "Good Support!",
+    name: "john partho",
+    img: review1,
+    desc: "They provide great service facilty consectetur adipisicing elit. Itaque rem, praesentium, iure, ipsum magnam deleniti a vel eos adipisci suscipit fugit placeat.",
+  },
 ];
 
 var settings = {
@@ -90,7 +97,7 @@ const Reviews = () => {
         cumque quaerat.
       </p>
 
-      <div>
+      <div className="px-20 ">
         <Slider {...settings}>
           {reviews.map((review) => (
             <Review key={review._id} review={review} />
