@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../SharedComponents/Footer/Footer";
 import BookAppointment from "../BookAppointment/BookAppointment";
 import Hero from "../Hero/Hero";
 import PatientCareFeature from "../PatientCareFeature/PatientCareFeature";
@@ -17,6 +18,7 @@ const Home = () => {
       <PatientCareFeature />
       <BookAppointment />
       <Reviews />
+      <Footer />
     </div>
   );
 };

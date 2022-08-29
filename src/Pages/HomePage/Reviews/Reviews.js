@@ -69,8 +69,8 @@ var settings = {
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         initialSlide: 2,
       },
     },
@@ -97,7 +97,7 @@ const Reviews = () => {
         cumque quaerat.
       </p>
 
-      <div className="px-20 ">
+      <div className="md:px-20 ">
         <Slider {...settings}>
           {reviews.map((review) => (
             <Review key={review._id} review={review} />
