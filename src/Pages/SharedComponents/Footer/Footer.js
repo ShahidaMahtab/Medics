@@ -7,20 +7,18 @@ import FooterLink from "../FooterLink/FooterLink";
 const footerLinks = [
   {
     title: "Department",
-    link1: "Surgery",
-    link2: "Women's Health",
-    link3: "Radiology",
-    link5: "Cardioc",
-    link6: "Medicine",
+    links: ["Surgery", "Women's Health", "Radiology", " Cardioc", "Medicine"],
   },
 
   {
     title: "Support",
-    link1: "Terms & Condition",
-    link2: "Privacy Policy",
-    link3: "Company Support",
-    link5: "FAQuestion",
-    link6: "Company Licence",
+    links: [
+      "Terms & Condition",
+      "Privacy Policy",
+      "Company Support",
+      "FAQuestion",
+      "Company Licence",
+    ],
   },
 
   {
@@ -36,8 +34,8 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <section className=" mt-14 mx-32 ">
-      <div className="flex justify-between">
+    <section className=" mb-28 mt-40 mx-32 ">
+      <div className="flex justify-between flex-wrap">
         <article className="flex flex-col items-start gap-7 ">
           {/* titles and icon */}
           <div className="flex gap-3 items-center  ">
@@ -54,7 +52,7 @@ const Footer = () => {
           </div>
           {/* footer link */}
         </article>
-        <article className="flex  gap-x-8 ">
+        <article className="flex  gap-x-20  flex-wrap">
           {footerLinks.map((footerLink) => (
             <FooterLink key={footerLink.title} footerLinks={footerLink} />
           ))}

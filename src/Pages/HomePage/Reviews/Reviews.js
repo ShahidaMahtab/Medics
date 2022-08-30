@@ -100,7 +100,7 @@ const Reviews = () => {
       <div className="md:px-20 ">
         <Slider {...settings}>
           {reviews.map((review) => (
-            <Review key={review._id} review={review} />
+            <Review key={review.id} review={review} />
           ))}
         </Slider>
       </div>
