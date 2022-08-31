@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../../Images/appoinment.jpg";
 import AppointmentForm from "../../SharedComponents/AppointmentForm/AppointmentForm";
+
 import { BsFillTelephoneFill } from "react-icons/bs";
 const BookAppointment = () => {
   return (

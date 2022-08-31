@@ -17,15 +17,15 @@ const FooterLink = (props) => {
           </p>
         ))}
       </div>
-      <div className="space-y-3">
-        <p className="flex gap-3 text-gray-600">
+      <div className="space-y-3 ">
+        <p className="flex gap-3 text-gray-700 hover:text-pink-600">
           <span className="block  text-xl">{icon1 && icon1}</span>
           <span className="block text-base">{time && time}</span>
         </p>
         <p className="text-xl font-semibold">{emailLink && emailLink}</p>
-        <p className="flex gap-3 text-gray-600">
+        <p className="flex gap-3 text-gray-700 hover:text-pink-600">
           <span className="block  text-2xl">{icon2 && icon2}</span>
-          <span className="block text-base">{support && support}</span>
+          <span className="block text-base ">{support && support}</span>
         </p>
         <p className="text-2xl font-semibold">{phone && phone}</p>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMedrt } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaMedrt, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import FooterLink from "../FooterLink/FooterLink";
@@ -49,6 +49,17 @@ const Footer = () => {
               Tempora dolorem voluptatum nam vero assumenda voluptate, facilis
               ad eos obcaecati tenetur veritatis eveniet distinctio possimus.
             </p>
+            <p className="space-x-5 ">
+              <span className="inline-block bg-slate-700 hover:bg-pink-700 p-2 rounded-full">
+                <FaFacebookF className="text-lg text-white" />
+              </span>
+              <span className="inline-block bg-slate-700 hover:bg-pink-700 p-2 rounded-full">
+                <FaTwitter className="text-lg text-white" />
+              </span>
+              <span className="inline-block bg-slate-700 hover:bg-pink-700 p-2 rounded-full">
+                <FaLinkedin className="text-lg text-white rounded-full" />
+              </span>
+            </p>
           </div>
           {/* footer link */}
         </article>
@@ -57,6 +68,9 @@ const Footer = () => {
             <FooterLink key={footerLink.title} footerLinks={footerLink} />
           ))}
         </article>
+      </div>
+      <div className="">
+        <p className="text-gray-600 text-base">©2022 All Right Reserved.</p>
       </div>
     </section>
   );
