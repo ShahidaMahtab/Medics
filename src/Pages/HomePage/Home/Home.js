@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "../../SharedComponents/Footer/Footer";
+import Footer from "../../SharedComponents/FooterComponent/Footer/Footer";
 import BookAppointment from "../BookAppointment/BookAppointment";
+
 import Hero from "../Hero/Hero";
 import PatientCareFeature from "../PatientCareFeature/PatientCareFeature";
 import PersonalCare from "../PersonalCare/PersonalCare";

@@ -2,11 +2,15 @@ import { createContext } from "react";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/HomePage/Home/Home";
+import Login from "./Pages/LoginPages/Login/Login";
+import Register from "./Pages/LoginPages/Register/Register";
+import RequireAuth from "./Pages/LoginPages/RequireAuth/RequireAuth";
 import MakeAppoinment from "./Pages/MakeAppoinment/MakeAppoinment";
 import NotFound from "./Pages/NotFound/NotFound";
-import Login from "./Pages/SharedComponents/Login/Login";
+import DoctorServices from "./Pages/ServicePage/DoctorServices/DoctorServices";
+
 import Navbar from "./Pages/SharedComponents/Navbar/Navbar";
-import Register from "./Pages/SharedComponents/Register/Register";
+
 export const ToggleContext = createContext(false);
 function App() {
   const [open, setOpen] = useState(false);
@@ -17,6 +21,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route
+          path="/services"
+          element={
+            <RequireAuth>
+              <DoctorServices />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/makeappoinment" element={<MakeAppoinment />} />

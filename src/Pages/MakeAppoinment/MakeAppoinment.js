@@ -1,7 +1,8 @@
 import React from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
-import AppointmentForm from "../SharedComponents/AppointmentForm/AppointmentForm";
+
 import makeAppointment from "../../Images/makeAppointment.jpg";
+import AppointmentForm from "../SharedComponents/AppointmentComponents/AppointmentForm/AppointmentForm";
 const MakeAppoinment = () => {
   return (
     <section className="mx-auto mb-16">

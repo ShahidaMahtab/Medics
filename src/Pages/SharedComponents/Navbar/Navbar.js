@@ -67,7 +67,10 @@ const Navbar = () => {
             ))}
             <li className="text-xl ml-14 md:ml-4 mb-4  md:mb-0  hover:underline hover:underline-offset-8 hover:decoration-2">
               {user ? (
-                <button onClick={handleSignOut}>sign out</button>
+                <div className="flex gap-3 ">
+                  <button onClick={handleSignOut}>sign out</button>
+                  <p>{user.displayName}</p>
+                </div>
               ) : (
                 <Link
                   className="text-black hover:text-pink-700 duration-500 "

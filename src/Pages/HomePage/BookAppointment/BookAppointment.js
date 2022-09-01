@@ -1,8 +1,8 @@
 import React from "react";
 import img from "../../../Images/appoinment.jpg";
-import AppointmentForm from "../../SharedComponents/AppointmentForm/AppointmentForm";
 
 import { BsFillTelephoneFill } from "react-icons/bs";
+import AppointmentForm from "../../SharedComponents/AppointmentComponents/AppointmentForm/AppointmentForm";
 const BookAppointment = () => {
   return (
     <div className="mx-auto mt-28 mb-40">

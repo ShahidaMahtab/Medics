@@ -1,7 +1,8 @@
 import React from "react";
+import PrimaryButton from "../../PrimaryButton/PrimaryButton";
 import DropDownComponents from "../DropDownComponents/DropDownComponents";
+
 import Form from "../Form/Form";
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 const AppointmentForm = () => {
   const options = [
