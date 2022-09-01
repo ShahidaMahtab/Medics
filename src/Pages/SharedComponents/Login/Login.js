@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import { useRef } from "react";
 
 const Login = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
@@ -17,18 +18,13 @@ const Login = () => {
     navigate("/home");
   }
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleEmailBlur = (event) => {
-    setEmail(event.target.value);
-  };
-  const handlePasswordBlur = (event) => {
-    setPassword(event.target.value);
-  };
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
 
   const handleUserSignIn = (event) => {
     event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password);
   };
 
@@ -37,13 +33,13 @@ const Login = () => {
       id: "44",
       inputType: "email",
       inputPlaceholder: "Your Email",
-      handler: handleEmailBlur,
+      handler: emailRef,
     },
     {
       id: "45",
       inputType: "password",
       inputPlaceholder: "password",
-      handler: handlePasswordBlur,
+      handler: passwordRef,
     },
   ];
 
@@ -63,7 +59,7 @@ const Login = () => {
               <div key={input.id} className="mx-auto text-center mb-3">
                 <label className="block text-center">
                   <input
-                    onBlur={input.handler}
+                    ref={input.handler}
                     type={input.inputType}
                     required
                     className="mx-auto mt-1 block w-1/2 px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400"
