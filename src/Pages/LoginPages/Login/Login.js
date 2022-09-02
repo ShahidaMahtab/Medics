@@ -8,21 +8,24 @@ import auth from "../../../firebase.init";
 import { useRef } from "react";
 import InputFields from "../InputFields/InputFields";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import Loading from "../../SharedComponents/Loading/Loading";
 
 const Login = () => {
   const [signInWithEmailAndPassword, user, error, loading] =
     useSignInWithEmailAndPassword(auth);
 
   const location = useLocation();
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
   let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
 
+  if (loading) {
+    return <Loading />;
+  }
   if (user) {
     navigate(from, { replace: true });
   }
-
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
 
   const handleUserSignIn = (event) => {
     event.preventDefault();

@@ -3,10 +3,14 @@ import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import Loading from "../../SharedComponents/Loading/Loading";
 
 const SocialLogin = () => {
   const navigate = useNavigate();
-  const [signInWithGoogle, user] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user, loading] = useSignInWithGoogle(auth);
+  if (loading) {
+    return <Loading />;
+  }
   if (user) {
     navigate("/home");
   }

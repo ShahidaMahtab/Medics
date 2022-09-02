@@ -1,23 +1,16 @@
 import React from "react";
-import { useContext } from "react";
+
 import { Link } from "react-router-dom";
-import { ToggleContext } from "../../../App";
 
 import hero from "../../../Images/slider-bg-1.jpg";
 import PrimaryButton from "../../SharedComponents/PrimaryButton/PrimaryButton";
 const Hero = () => {
-  const [open, setOpen] = useContext(ToggleContext);
-
   return (
     <section className="">
       <div className="hidden md:block  md:relative">
         <img src={hero} alt="" />
       </div>
-      <div
-        className={`md:absolute md:top-40 md:left-44 ${
-          open ? "mt-80" : "mt-0"
-        }`}
-      >
+      <div className="md:absolute md:top-40 md:left-44 ">
         <div className="border-t-[5px] mr-[450px]  border-pink-700 "></div>
         <h4 className="text-base font-medium text-gray-700 ml-10 md:ml-0">
           TOTAL HEALTH CARE SOLUTION
