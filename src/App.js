@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import About from "./Pages/AboutPage/About/About";
 import Home from "./Pages/HomePage/Home/Home";
 import Login from "./Pages/LoginPages/Login/Login";
 import Register from "./Pages/LoginPages/Register/Register";
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/services"
           element={
