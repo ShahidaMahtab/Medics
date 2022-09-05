@@ -1,7 +1,11 @@
 import React from "react";
+import useServices from "../../../hooks/useServices";
 import BannerComponent from "../../SharedComponents/BannerComponent/BannerComponent";
+import ServiceCard from "../../SharedComponents/ServiceCard/ServiceCard";
 
 const About = () => {
+  const [services] = useServices();
+
   return (
     <section className="mx-auto ">
       {/* banner */}
@@ -23,6 +27,14 @@ const About = () => {
               reprehenderit dignissimos, <br /> libero delectus.
             </p>
           </div>
+        </div>
+      </article>
+
+      <article className="mt-12 mx-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-6">
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
         </div>
       </article>
     </section>
