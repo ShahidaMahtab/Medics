@@ -1,7 +1,7 @@
 import React from "react";
 import useServices from "../../../hooks/useServices";
 import BannerComponent from "../../SharedComponents/BannerComponent/BannerComponent";
-import ServiceCard from "../../SharedComponents/ServiceCard/ServiceCard";
+import AboutCard from "../AboutCard/AboutCard";
 
 const About = () => {
   const [services] = useServices();
@@ -30,10 +30,10 @@ const About = () => {
         </div>
       </article>
 
-      <article className="mt-12 mx-24">
-        <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-y-6">
-          {services.map((service) => (
-            <ServiceCard key={service.id} service={service} />
+      <article className="container mx-20 my-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 justify-center gap-y-6 mx-auto">
+          {services.slice(0, 4).map((service) => (
+            <AboutCard key={service.id} service={service} />
           ))}
         </div>
       </article>
