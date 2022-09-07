@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import About from "./Pages/AboutPage/About/About";
 import Home from "./Pages/HomePage/Home/Home";
@@ -7,7 +6,8 @@ import Register from "./Pages/LoginPages/Register/Register";
 import RequireAuth from "./Pages/LoginPages/RequireAuth/RequireAuth";
 import MakeAppoinment from "./Pages/MakeAppoinment/MakeAppoinment";
 import NotFound from "./Pages/NotFound/NotFound";
-import DoctorServices from "./Pages/ServicePage/DoctorServices/DoctorServices";
+import Services from "./Pages/ServicesPage/Services/Services";
+
 import Navbar from "./Pages/SharedComponents/Header/Navbar/Navbar";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
           path="/services"
           element={
             <RequireAuth>
-              <DoctorServices />
+              <Services />
             </RequireAuth>
           }
         />

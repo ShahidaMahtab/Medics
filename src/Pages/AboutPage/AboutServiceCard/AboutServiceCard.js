@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutCard = (props) => {
+const AboutServiceCard = (props) => {
   const { img, aboutTitle, desc } = props.service;
   return (
     <div className="mx-auto">
@@ -17,4 +17,4 @@ const AboutCard = (props) => {
   );
 };
 
-export default AboutCard;
+export default AboutServiceCard;
