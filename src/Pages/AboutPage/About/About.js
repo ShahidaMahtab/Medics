@@ -2,6 +2,7 @@ import React from "react";
 import BannerComponent from "../../SharedComponents/BannerComponent/BannerComponent";
 import AboutDoctorAchievement from "../AboutDoctorAchievement/AboutDoctorAchievement";
 import AboutServices from "../AboutServices/AboutServices";
+import AboutSpecialists from "../AboutSpecialists/AboutSpecialists";
 
 import HealthyLiving from "../HealthyLiving/HealthyLiving";
 
@@ -13,6 +14,7 @@ const About = () => {
         <HealthyLiving />
         <AboutServices />
         <AboutDoctorAchievement />
+        <AboutSpecialists />
       </article>
     </section>
   );
