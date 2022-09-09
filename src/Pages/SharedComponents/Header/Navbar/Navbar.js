@@ -8,6 +8,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 import auth from "../../../../firebase.init";
 import ProfileDropDown from "../ProfileDropDown/ProfileDropDown";
+import NavigationLink from "../NavigationLink/NavigationLink";
+import ProtectedLink from "../ProtectedLink/ProtectedLink";
 const navigation = [
   { id: 1, to: "/home", name: "Home" },
   { id: 2, to: "/about", name: "About" },
@@ -24,7 +26,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const [user] = useAuthState(auth);
-  console.log(user);
 
   return (
     <nav className=" border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
@@ -39,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center md:order-2">
           {/* profile drop down */}
-          <ProfileDropDown />
+          {user && <ProfileDropDown />}
           <button
             onClick={() => setOpen(!open)}
             data-collapse-toggle="mobile-menu-2"
@@ -72,18 +73,10 @@ const Navbar = () => {
           md:font-medium md:border-0 md:bg-[#dbeafe] "
           >
             {navigation.map((nav) => (
-              <li key={nav.id}>
-                <Link
-                  to={nav.to}
-                  className="block py-2 pr-4 pl-3 text-rounded bg-[#dbeafe] 
-                   md:hover:bg-[#dbeafe] text-lg hover:text-pink-700  md:hover:underline 
-                   md:hover:underline-offset-8 hover:decoration-2 hover:bg-blue-200"
-                  aria-current="page"
-                >
-                  {nav.name}
-                </Link>
-              </li>
+              <NavigationLink key={nav.id} nav={nav} />
             ))}
+
+            {user && <ProtectedLink />}
           </ul>
         </div>
       </div>

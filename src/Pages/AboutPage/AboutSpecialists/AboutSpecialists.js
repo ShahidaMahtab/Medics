@@ -6,25 +6,25 @@ import specialist4 from "../../../Images/test-thumb4.jpg";
 
 const specialists = [
   {
-    id: 400,
+    id: 444,
     img: specialist1,
     name: "John Marshal",
     bio: "Internist, Emergency Physician",
   },
   {
-    id: 401,
+    id: 441,
     img: specialist2,
     name: "Marshal Root",
     bio: "Surgeon, Сardiologist",
   },
   {
-    id: 402,
+    id: 442,
     img: specialist3,
     name: "Siamon john",
     bio: "Internist, General Practitioner",
   },
   {
-    id: 403,
+    id: 443,
     img: specialist4,
     name: "Rishat Ahmed",
     bio: "Orthopedic Surgeon",
@@ -48,13 +48,13 @@ const AboutSpecialists = () => {
       </div>
       <article className="grid grid-cols-4 px-24 justify-center">
         {specialists.map((specialist) => (
-          <div className="mx-auto ">
+          <div key={specialist?.id} className="mx-auto ">
             <div className="text-center">
-              <img src={specialist.img} alt="" />
+              <img src={specialist?.img} alt="" />
             </div>
             <div>
-              <h3> {specialist.name}</h3>
-              <p> {specialist.bio}</p>
+              <h3> {specialist?.name}</h3>
+              <p> {specialist?.bio}</p>
             </div>
           </div>
         ))}

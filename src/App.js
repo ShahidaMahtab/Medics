@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import About from "./Pages/AboutPage/About/About";
+import Dashboard from "./Pages/DashboardComponet/Dashboard/Dashboard";
 import Home from "./Pages/HomePage/Home/Home";
 import Login from "./Pages/LoginPages/Login/Login";
 import Register from "./Pages/LoginPages/Register/Register";
@@ -23,6 +24,14 @@ function App() {
           element={
             <RequireAuth>
               <Services />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
             </RequireAuth>
           }
         />
