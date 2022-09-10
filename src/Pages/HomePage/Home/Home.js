@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../../SharedComponents/FooterComponent/Footer/Footer";
+import Navbar from "../../SharedComponents/Header/Navbar/Navbar";
 import BookAppointment from "../BookAppointment/BookAppointment";
 
 import Hero from "../Hero/Hero";
@@ -13,6 +14,7 @@ import Stats from "../Stats/Stats";
 const Home = () => {
   return (
     <div className="mx-auto">
+      <Navbar></Navbar>
       <Hero />
       <Schedules />
       <PersonalCare />
